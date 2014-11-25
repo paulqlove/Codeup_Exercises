@@ -24,12 +24,14 @@ $books = [
 ];
 
 foreach($books as $title => $info) {
-    
-    echo 'Book: ' . $title . PHP_EOL;
-    echo 'Author: ' . $author . "{$info['author']}" . PHP_EOL;
-    echo 'Year: ' . $published . "{$info['published']}" . PHP_EOL;
-    echo 'Pages: ' . $pages . "{$info['pages']}" . PHP_EOL;
-    echo PHP_EOL;
+    if( $info['published'] >= 1950) {
+        echo 'Book: ' . $title . PHP_EOL;
+        echo 'Author: ' . $author . "{$info['author']}" . PHP_EOL;
+        echo 'Year: ' . $published . "{$info['published']}" . PHP_EOL;
+        echo 'Pages: ' . $pages . "{$info['pages']}" . PHP_EOL;
+        echo PHP_EOL;
+    }
+   
     
 }
   
