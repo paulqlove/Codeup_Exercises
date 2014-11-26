@@ -1,36 +1,70 @@
 <?php
-$a = 'five';
-$b = 3;
 
-if(is_numeric($a) && is_numeric($b)) {
+$a = 16;
+$b = 'ten';
+
+ function errorMsg($param1, $param2){
+	echo "Error: Numbers Both Arguments must be numbers" . PHP_EOL;
+	echo "\$a = $param1, and \$b = $param2 " . PHP_EOL;
+}
 		
 		function add($a, $b) {
+			if(is_numeric($a) && is_numeric($b)) {
+		    	echo $a + $b . PHP_EOL;
+			} else {
+				echo errorMsg($a, $b) . PHP_EOL;
 
-		    echo $a + $b . PHP_EOL;
-		}
-			add($a, $b);
+			}
+		}	
 
 		function subtract($a, $b) {
-		    echo $a - $b .PHP_EOL;
-		}
-			subtract($a, $b);
+		    if(is_numeric($a) && is_numeric($b)) {
+		    	echo $a - $b .PHP_EOL;
+			} else {
+				echo "ERROR: Numbers only please!" . PHP_EOL;
+
+			}
+		}	
 
 		function multiply($a, $b) {
-		    echo $a * $b . PHP_EOL;
+			if(is_numeric($a) && is_numeric($b)) {
+		   		echo $a * $b . PHP_EOL;
 
-		}
-			multiply($a, $b);
-
-		function divide($a, $b) {
-		    echo $a / $b . PHP_EOL;
-		}
-			divide($a, $b);
-
-		function modulus($a, $b){
-			echo $a % $b . PHP_EOL;
-		}
-			modulus($a, $b);
-		} else {
+				} else {
 				echo "ERROR: Numbers only please!" . PHP_EOL;
-			}
 
+			}
+		}	
+		function divide($a, $b) {
+			if(($a == 0) || ($b == 0)) {
+				echo "Error: can not be divdided" . PHP_EOL;
+			}
+			if(is_numeric($a) && is_numeric($b)){
+				echo $a / $b . PHP_EOL;
+			} else {
+				echo "ERROR: Numbers ONly" . PHP_EOL;
+			}
+		}
+			
+
+		function modulus($a, $b) {
+			if(is_numeric($a) && is_numeric($b)) {
+			
+				echo $a % $b . PHP_EOL;
+
+		}	else {
+				echo "ERROR: Numbers only please!" . PHP_EOL;
+
+			}
+		}
+
+
+
+add($a, $b);
+subtract($a, $b);
+multiply($a, $b);
+divide($a, $b);
+modulus($a, $b);
+
+
+ 
