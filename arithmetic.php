@@ -1,30 +1,31 @@
 <?php
-
+$a = 5;
+$b = 3;
 
 function add($a, $b) {
 
     echo $a + $b . PHP_EOL;
 }
-	add(2, 5);
+	add($a, $b);
 
 function subtract($a, $b) {
     echo $a - $b .PHP_EOL;
 }
-	subtract(7,5);
+	subtract($a, $b);
 
 function multiply($a, $b) {
     echo $a * $b . PHP_EOL;
 
 }
-	multiply(7,2);
+	multiply($a, $b);
 
 function divide($a, $b) {
     echo $a / $b . PHP_EOL;
 }
-	divide(50, 5);
+	divide($a, $b);
 
 function modulus($a, $b){
 	echo $a % $b . PHP_EOL;
 }
-	modulus(62, 3);
+	modulus($a, $b);
 ?>
