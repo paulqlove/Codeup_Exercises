@@ -1,7 +1,17 @@
 <?php
 
 $a = 16;
-$b = 0;
+$b = 45;
+$sum = add($a, $b);
+echo $sum ;
+$minus = subtract($a, $b);
+echo $minus; 
+$product = multiply($a, $b);
+echo $product;
+$div = divide($a, $b);
+echo $div;
+$mod = modulus($a, $b);
+echo $mod;
 
  function errorMsg($param1, $param2){
 	echo "Error: Numbers you entered in" . PHP_EOL;
@@ -10,7 +20,8 @@ $b = 0;
 		
 		function add($a, $b) {
 			if(is_numeric($a) && is_numeric($b)) {
-		    	echo $a + $b . PHP_EOL;
+		    	return $a + $b . PHP_EOL;
+
 			} else {
 				echo errorMsg($a, $b) . PHP_EOL;
 
@@ -19,7 +30,7 @@ $b = 0;
 
 		function subtract($a, $b) {
 		    if(is_numeric($a) && is_numeric($b)) {
-		    	echo $a - $b .PHP_EOL;
+		    	return $a - $b .PHP_EOL;
 			} else {
 				echo "ERROR: Numbers only please!" . PHP_EOL;
 
@@ -28,7 +39,7 @@ $b = 0;
 
 		function multiply($a, $b) {
 			if(is_numeric($a) && is_numeric($b)) {
-		   		echo $a * $b . PHP_EOL;
+		   		return $a * $b . PHP_EOL;
 
 				} else {
 				echo "ERROR: Numbers only please!" . PHP_EOL;
@@ -40,7 +51,7 @@ $b = 0;
 				echo "Division Error: can not be divdided" . PHP_EOL;
 				echo errorMsg($a, $b) . PHP_EOL;
 			} elseif (is_numeric($a) && is_numeric($b)) {
-					echo $a / $b . PHP_EOL;
+					return $a / $b . PHP_EOL;
 				} else {
 						echo "ERROR: Numbers ONly" . PHP_EOL;
 						}	
@@ -52,14 +63,13 @@ $b = 0;
 				echo errorMsg($a, $b);
 			} elseif(is_numeric($a) && is_numeric($b)) {
 			
-				echo $a % $b . PHP_EOL;
+				return $a % $b . PHP_EOL;
 
 		}	else {
 				echo "ERROR: Numbers only please!" . PHP_EOL;
 
 			}
 		}
-
 
 
 add($a, $b);
