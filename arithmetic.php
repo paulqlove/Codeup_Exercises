@@ -1,10 +1,10 @@
 <?php
 
 $a = 16;
-$b = 'five';
+$b = 0;
 
  function errorMsg($param1, $param2){
-	echo "Error: Numbers Both Arguments must be numbers" . PHP_EOL;
+	echo "Error: Numbers you entered in" . PHP_EOL;
 	echo "\$a = $param1,  and  \$b = $param2"  . PHP_EOL;
 }
 		
@@ -37,7 +37,7 @@ $b = 'five';
 		}	
 		function divide($a, $b) {
 			if(($a === 0) || ($b === 0)) {
-				echo "Error: can not be divdided" . PHP_EOL;
+				echo "Division Error: can not be divdided" . PHP_EOL;
 				echo errorMsg($a, $b) . PHP_EOL;
 			} elseif (is_numeric($a) && is_numeric($b)) {
 					echo $a / $b . PHP_EOL;
@@ -48,8 +48,8 @@ $b = 'five';
 		
 		function modulus($a, $b) {
 			if(($a === 0) || ($b === 0)) {
-				echo "Error: can not use zero" . PHP_EOL;
-				
+				echo "Modulation Error: can not use zero" . PHP_EOL;
+				echo errorMsg($a, $b);
 			} elseif(is_numeric($a) && is_numeric($b)) {
 			
 				echo $a % $b . PHP_EOL;
